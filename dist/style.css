@@ -11,6 +11,7 @@ body, html {
   font-family: sans-serif;
   background-color: #3F72AF;
   color: #112D4E;
+  height: 100%;
 }
 
 .cart {
@@ -50,16 +51,25 @@ body {
   flex-direction: column;
 }
 
+main {
+  display: flex;
+  margin: 1rem;
+  height: 100%;
+}
+
 .header {
   font-size: 1rem;
-  flex-basis: 100%;
+  background-color: #DBE2EF;
+  height: 5rem;
 }
 
 .header__nav {
   padding: 0.5rem;
+  display: flex;
 }
 
 .header__nav__list {
+  flex-basis: 100%;
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -70,16 +80,48 @@ body {
   margin-inline-start: auto;
 }
 
-.categories {
+.hamburger__button div {
+  width: 18px;
+  height: 2px;
+  margin: 4px 0;
+  background-color: black;
+}
+
+.header__nav__button {
+  display: none;
+}
+
+.header__nav__hidden {
+  background-color: #DBE2EF;
+  padding: 2rem;
+  border-right: #DBE2EF 1px solid;
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+  transform: translate(-1rem, -1rem);
+}
+
+.header__nav__hidden .header__nav__button ~ li {
+  display: none;
+}
+
+.header__nav__hidden .header__nav__button:checked ~ li {
+  display: block;
+}
+
+.categories {
+  flex-basis: 100%;
+  padding: 1rem;
+  margin-top: 3rem;
 }
 
 .room__category__list {
-  grid-row: 1/2;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 1rem;
+}
+.room__category__list p {
+  color: #DBE2EF;
 }
 
 .room__category__list img {
@@ -87,17 +129,8 @@ body {
   aspect-ratio: 1;
   border-radius: 1rem;
 }
-
-.item__category__list {
-  grid-row: 2/3;
-  display: flex;
-  overflow: scroll;
-  gap: 1rem;
-}
-
-.item__category__list img {
-  border-radius: 1rem;
-  aspect-ratio: 1;
+.room__category__list img:hover {
+  border: #DBE2EF 1px solid;
 }
 
 *,
@@ -107,6 +140,7 @@ body {
 }
 
 .cart {
+  margin-inline: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -203,7 +237,15 @@ hr {
   background-color: #3F72AF;
 }
 
+.product {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
 .product__view {
+  background-color: #DBE2EF;
   height: fit-content;
   padding: 0.5rem;
   width: min(60rem, calc(100% - 2rem));
@@ -274,15 +316,19 @@ hr {
 }
 
 .buy__section {
+  background-color: #DBE2EF;
   border: 2px solid black;
   border-radius: 0.5rem;
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  height: 50%;
 }
 
 .buy__section button {
+  background-color: #112D4E;
+  color: white;
   border: none;
   border-radius: 0.5rem;
   height: 3rem;

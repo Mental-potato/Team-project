@@ -4,11 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="dist/ProductPageStyles.css">
+    <link rel="stylesheet" href="dist/style.css">
 </head>
 <body>
-    <h2></h2>
+    <header class="header">
+        <nav class="header__nav">
+        
+            <ul class="header__nav__list">
+              <li><h1 class="header__title">INVICTUS</h1> </li>           
+              <li class="header__nav__searchbar">
+              <form action="">
+              <label for="searchbar">Search</label>
+               <input type="text" id="searchbar">
+              </form>
+                </li>
+</ul>
+    </nav>
+    </header>
     <main>
+        <ul class="header__nav__hidden">
+            <label class="hamburger__button" for="nav-button"> 
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+            <input  class="header__nav__button" type="checkbox" id="nav-button">
+       
+            <li><a href="">Categories</a></li>
+            <li><a href="index.html">Products</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="">Costumer service</a></li>
+            </ul>
+    
+        <article class="product">
     <article class="product__view">
        
         <ul class="product__image__list">
@@ -47,6 +75,7 @@
         <button class="buy__wishlist__btn">Add to Wishlist</button>
         <button class="buy__review__btn"> Write review</button>
     </article>
+</article>
 </main>
     
 </body>
