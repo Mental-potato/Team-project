@@ -13,29 +13,58 @@
                     <ul class="header__nav__list">
                       <li><h1 class="header__title">INVICTUS</h1> </li>           
                       <li class="header__nav__searchbar">
-                      <form action="">
-                      <label for="searchbar">Search</label>
-                       <input type="text" id="searchbar">
-                      </form>
+                      <input class="searchbar__btn" type="checkbox" id="searchbar__checkbox">
+                      <label  class="searchbar__icon" for="searchbar__checkbox"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                      </svg>
+                      </label>
+                       <input class="searchbar" type="text">
                         </li>
         </ul>
-       
             </nav>
             </header>
-            <main>
             <ul class="header__nav__hidden">
                 <label class="hamburger__button" for="nav-button"> 
                     <div></div>
                     <div></div>
                     <div></div>
                 </label>
-                <input  class="header__nav__button" type="checkbox" id="nav-button">
-           
-                <li><a href="">Categories</a></li>
-                <li><a href="index.html">Products</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                <li><a href="">Costumer service</a></li>
-                </ul>
+        <input  class="header__nav__button" type="checkbox" id="nav-button">
+           <li >
+            
+            <ul class="accordion__container">
+                <input  class="first__dropdown dropdown" type="checkbox"  id="first">
+                    <label class="dropdown--btn" for="first">Categories</label>
+                    
+        <li class="secondary__dropdown ">
+            <input class="dropdown" type="radio" name="accordion" id="second">
+             <label class="dropdown--btn " for="second">Rooms</label>
+             <ul>
+        <a href="">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">4</a>
+        </ul>
+        </li>
+        <li class="secondary__dropdown ">
+            <input class="dropdown" type="radio" name="accordion" id="third">
+            <label class="dropdown--btn" for="third">Products</label>
+            <ul>
+            <a href="">5</a>
+            <a href="">6</a>
+            <a href="">7</a>
+            <a href="">8</a>
+            </li>
+            
+        </ul>
+        <li class="__break"><a href="">asd</a></li>
+            <li><a href="">asd</a></li>
+            <li><a href="">asd</a></li>
+        </ul>
+        </li>
+        </ul>
+        
+                <main>
             <div class="cart">
                 <div class="centered-column">
                     <h1 class = "h1_cart">Your Shopping Cart</h1>
