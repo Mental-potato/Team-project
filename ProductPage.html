@@ -7,46 +7,97 @@
     <link rel="stylesheet" href="dist/style.css">
 </head>
 <body>
+    
     <header class="header">
         <nav class="header__nav">
         
             <ul class="header__nav__list">
               <li><h1 class="header__title">INVICTUS</h1> </li>           
               <li class="header__nav__searchbar">
-              <form action="">
-              <label for="searchbar">Search</label>
-               <input type="text" id="searchbar">
-              </form>
+              <input class="searchbar__btn" type="checkbox" id="searchbar__checkbox">
+              <label  class="searchbar__icon" for="searchbar__checkbox"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+              </svg>
+              </label>
+               <input class="searchbar" type="text">
                 </li>
 </ul>
     </nav>
     </header>
-    <main>
-        <ul class="header__nav__hidden">
-            <label class="hamburger__button" for="nav-button"> 
-                <div></div>
-                <div></div>
-                <div></div>
-            </label>
-            <input  class="header__nav__button" type="checkbox" id="nav-button">
-       
-            <li><a href="">Categories</a></li>
-            <li><a href="index.html">Products</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="">Costumer service</a></li>
-            </ul>
+    <ul class="header__nav__hidden">
+        <label class="hamburger__button" for="nav-button"> 
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+<input  class="header__nav__button" type="checkbox" id="nav-button">
+    
+    <ul class="accordion__container">
+        <input  class="first__dropdown dropdown" type="checkbox"  id="first">
+            <label class="dropdown--btn" for="first">Categories</label>
+            
+<li class="secondary__dropdown ">
+    <input class="dropdown" type="radio" name="accordion" id="second">
+     <label class="dropdown--btn " for="second">Rooms</label>
+     <ul>
+<a href="">Dinning Room</a>
+<a href="">Kitchen</a>
+<a href="">Garden</a>
+<a href="">Bathroom</a>
+<a href="">Office</a>
+<a href="">Living Room</a>
+<a href="">Storage Room</a>
+<a href="">Basement</a>
+</ul>
+</li>
+<li class="secondary__dropdown ">
+    <input class="dropdown" type="radio" name="accordion" id="third">
+    <label class="dropdown--btn" for="third">Products</label>
+    <ul>
+    <a href="">Chairs</a>
+    <a href="">Tables</a>
+    <a href="">Desks</a>
+    <a href="">Beds</a>
+    <a href="">Office Chairs</a>
+    <a href="">Cabinets</a>
+    <a href="">Stands</a>
+    <a href="">Shelves</a>
+    </li>
+    
+</ul>
+
+    
+</ul>
+<li class="__break"><a href="">About us</a></li>
+    <li><a href="">Contacts</a></li>
+</li>
+</ul>
+    
+
+            <main>
     
         <article class="product">
     <article class="product__view">
-       
+
         <ul class="product__image__list">
-            <li><img src="photos/gamingchair.png" alt=""></li>
-                <li><img class="image__2" src="photos/gamingchair2.jpg" alt=""></li>
-            <li><img src="photos/gamingchair3.jpg" alt=""></li>
-            <li><img src="photos/gamingchair4.jpg" alt=""></li>
+            <li class="product__image__1  product__image"><img src="https://picsum.photos/id/783/200/200" alt=""></li>
+            <li class="product__image__2  product__image"><img  src="https://picsum.photos/id/67/200/200" alt=""></li>
+            <li class="product__image__3  product__image"><img src="https://picsum.photos/id/856/200/200" alt=""></li>
+            <li class="product__image__4  product__image"><img src="https://picsum.photos/id/234/200/200" alt=""></li>
             
         </ul>
-        <img class="product__image" src="photos/gamingchair.png" alt="">
+
+        <ul class="image__container">
+            <li class="container__image container__image__1"><img src="https://picsum.photos/id/783/200/200" alt=""></li>
+           <li class="container__image container__image__2"><img  src="https://picsum.photos/id/67/200/200" alt=""></li>
+            <li class="container__image container__image__3"><img src="https://picsum.photos/id/856/200/200" alt=""></li>
+            <li class="container__image container__image__4"><img src="https://picsum.photos/id/234/200/200" alt=""></li>
+         </ul>
+       
+        
+            
+         </article>
+         <article class="product__info">
 <p class="product__name">Secretlab Titan Evo 2022,
      The Secretlab Titan Evo 2022 is a premium gaming chair known for i
     ts comfort, durability, and ergonomic features, making it
@@ -67,16 +118,16 @@
         ing strain on your shoulders during extended gaming sessions.</li>
     
 </ul>
+<div class="btn__container">
+    <button class="standard--btn">Buy Now</button>
+    <button class="standard--btn">Add to Cart</button>
+</div>
     </article>
 
-    <article class="buy__section">
-        <p class="buy__price">99.99$</p>
-        <button class="buy__btn">Add to Cart</button>
-        <button class="buy__wishlist__btn">Add to Wishlist</button>
-        <button class="buy__review__btn"> Write review</button>
-    </article>
+   
 </article>
 </main>
     
 </body>
 </html>
+
