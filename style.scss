@@ -334,6 +334,9 @@ height: 100%;
    height: 1.5rem;
    overflow: hidden;
    transition: height 200ms;
+      input{
+    display: none;
+   }
 }
 
 .secondary__dropdown:has(input:checked){
@@ -588,7 +591,9 @@ img{
     opacity: 0;
     
 }
-
+.product__image{
+    width: 300px;
+}
 .product__image__list{
 
 display: flex;
