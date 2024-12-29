@@ -599,7 +599,9 @@ img{
 display: flex;
 gap: 0.5rem;
 img{
-    max-width: calc((100%-1.5rem)/4);
+    //max-width: calc((100%-1.5rem)/4);
+    width: 100%;
+    aspect-ratio: 1;
 } 
 }
 .product__image__list img{
