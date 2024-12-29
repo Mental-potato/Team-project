@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::After,
 *::before {
@@ -73,10 +74,37 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 5px;
   cursor: pointer;
   font-size: 1.1em;
-  transition: background-color 0.3s;
+  position: relative;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
 }
+
 .standard--btn:hover {
   background-color: #3F72AF;
+}
+
+.standard--btn:focus {
+  outline: none;
+}
+
+/* On click, change background and show checkmark */
+.standard--btn:active {
+  background-color: #4CAF50;
+}
+
+.standard--btn:active span {
+  visibility: hidden;
+  /* Hide text */
+}
+
+.standard--btn:active::after {
+  content: "✔";
+  font-size: 1.5em;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 ::-webkit-scrollbar {
@@ -322,6 +350,9 @@ h1, h2, h3, h4, h5, h6 {
   gap: 1rem;
   margin-top: 1rem;
 }
+.secondary__dropdown input {
+  display: none;
+}
 
 .secondary__dropdown:has(input:checked) {
   height: 400px;
@@ -552,12 +583,17 @@ hr {
   opacity: 0;
 }
 
+.product__image {
+  width: 300px;
+}
+
 .product__image__list {
   display: flex;
   gap: 0.5rem;
 }
 .product__image__list img {
-  max-width: calc((100%-1.5rem)/4);
+  width: 100%;
+  aspect-ratio: 1;
 }
 
 .product__image__list img:hover {
